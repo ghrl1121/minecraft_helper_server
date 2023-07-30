@@ -114,7 +114,7 @@ namespace 마크서버_만들기
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Process.Start("https://github.com/ghrl1121/minecraft_helper_server");
         }
     }
 }
