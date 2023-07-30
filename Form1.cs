@@ -110,6 +110,10 @@ namespace 마크서버_만들기
             {
                 textBox1.Text = Path.GetFullPath(dialog.FileName);
             }
+            else
+            {
+                MessageBox.Show("죄송합니다 서버 다운은 코드 보기에서 참조하세요");
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
