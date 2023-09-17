@@ -28,7 +28,21 @@ namespace 마크서버_만들기
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //문제! mas 값 "m" max 값 "m" 안될수도?
+            if (comboBox1.SelectedIndex == 0)
+            {
+                label1.Text = "M";
+                label2.Text = "M";
+                textBox1.Text = "4080";
+                textBox2.Text = "4080";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                label1.Text = "G";
+                label2.Text = "G";
+                textBox1.Text = "4";
+                textBox2.Text = "4";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
