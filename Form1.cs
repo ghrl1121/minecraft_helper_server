@@ -28,7 +28,7 @@ namespace 마크서버_만들기
             if (Directory.Exists(m))
             {
                 Form2 form2 = new Form2(textBox1.Text);
-                form2.Show();
+                form2.ShowDialog();
             }
             else
             {

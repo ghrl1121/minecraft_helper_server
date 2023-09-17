@@ -28,21 +28,6 @@ namespace 마크서버_만들기
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //문제! mas 값 "m" max 값 "m" 안될수도?
-            if(comboBox1.SelectedIndex == 0)
-            {
-                label1.Text = "M";
-                label2.Text = "M";
-                textBox1.Text = "4080";
-                textBox2.Text = "4080";
-            }
-            else if(comboBox1.SelectedIndex == 1)
-            {
-                label1.Text = "G";
-                label2.Text = "G";
-                textBox1.Text = "4";
-                textBox2.Text = "4";
-            }
 
         }
 
@@ -62,7 +47,7 @@ namespace 마크서버_만들기
                 }
                 else
                 {
-                    string[] lines = { "@echo off", "java -Xms" +aq + BA + " -Xmx" + aw + BA +" -jar "+ AA,"pause"};
+                    string[] lines = { "@echo off", "java -Xmx" +aq + "M" + " -Xms" + aw + "M" +" -jar "+ AA,"pause"};
                     File.WriteAllLines(AB+@"\comms.bat",lines);
                     Process A =new Process();
                     A.StartInfo.FileName = "comms.bat";
@@ -86,7 +71,7 @@ namespace 마크서버_만들기
                 }
                 else
                 {
-                    string[] lines = { "@echo", "java -Xms" + aq + BA + " -Xmx" + aw + BA + " -jar " + aa, "pause" };
+                    string[] lines = { "@echo", "java -Xmx" + aq + "G" + " -Xms" + aw+ "G" + " -jar " + aa, "pause" };
                     File.WriteAllLines(ab + @"comms.bat",lines);
                     Process A =new Process();
                     A.StartInfo.FileName = "comms.bat";
@@ -96,6 +81,12 @@ namespace 마크서버_만들기
                     File.Delete(ab + @"\comms.bat");
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
         }
     }
 }
