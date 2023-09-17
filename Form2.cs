@@ -86,7 +86,7 @@ namespace 마크서버_만들기
                 else
                 {
                     string[] lines = { "@echo", "java -Xmx" + aq + "G" + " -Xms" + aw+ "G" + " -jar " + aa, "pause" };
-                    File.WriteAllLines(ab + @"comms.bat",lines);
+                    File.WriteAllLines(ab + @"\comms.bat",lines);
                     Process A =new Process();
                     A.StartInfo.FileName = "comms.bat";
                     A.StartInfo.WorkingDirectory = ab;
