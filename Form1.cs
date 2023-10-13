@@ -17,6 +17,12 @@ namespace 마크서버_만들기
         public Form1()
         {
             InitializeComponent();
+            if (File.Exists("text.lal"))
+            {
+                StreamReader stream = new StreamReader("text.lal");
+                textBox1.Text = stream.ReadLine();
+                stream.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -109,6 +115,8 @@ namespace 마크서버_만들기
             if (result == DialogResult.OK)
             {
                 textBox1.Text = Path.GetFullPath(dialog.FileName);
+                string[] strings = textBox1.Text.Split();
+                File.WriteAllLines("text.lal", strings);
             }
             else
             {
