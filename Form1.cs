@@ -17,15 +17,30 @@ namespace 마크서버_만들기
         public Form1()
         {
             InitializeComponent();
+            
             if (File.Exists("text.lal"))
             {
                 StreamReader stream = new StreamReader("text.lal");
                 textBox1.Text = stream.ReadLine();
                 stream.Close();
             }
+            else
+            {
+                textBox1.Text = "서버 버킷을 찾아 주세요";
+            }
+
+            if (File.Exists(textBox1.Text))
+            {
+                //파일이 있을경우 넘기고... 
+            }
+            else
+            {
+                textBox1.Text = "파일이 삭제 된것 같습니다!";
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+          
+    private void button1_Click(object sender, EventArgs e)
         {
             //서버준비
             //Form2로
@@ -98,6 +113,7 @@ namespace 마크서버_만들기
                 Process n = new Process();
                 n.StartInfo.FileName = B + @"\plugins";
                 n.Start();
+                
             }
             else
             {

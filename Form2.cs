@@ -69,6 +69,7 @@ namespace 마크서버_만들기
                     A.Start();
                     A.WaitForExit(1000);
                     File.Delete(AB + @"\comms.bat");
+                    Close();
                 }
             }
             else if(comboBox1.SelectedIndex == 1) 
@@ -93,6 +94,7 @@ namespace 마크서버_만들기
                     A.Start();
                     A.WaitForExit(1000);
                     File.Delete(ab + @"\comms.bat");
+                    Close();
                 }
             }
         }
