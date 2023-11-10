@@ -39,7 +39,6 @@ namespace 마크서버_만들기
             }
         }
 
-          
     private void button1_Click(object sender, EventArgs e)
         {
             //서버준비
@@ -113,7 +112,6 @@ namespace 마크서버_만들기
                 Process n = new Process();
                 n.StartInfo.FileName = B + @"\plugins";
                 n.Start();
-                
             }
             else
             {

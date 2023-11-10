@@ -28,7 +28,6 @@ namespace 마크서버_만들기
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //문제! mas 값 "m" max 값 "m" 안될수도?
             if (comboBox1.SelectedIndex == 0)
             {
                 label1.Text = "M";
@@ -47,7 +46,11 @@ namespace 마크서버_만들기
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedIndex == 0)
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("선택하세요! \n\r M 와 G 가 있습니다");
+            }
+            else if(comboBox1.SelectedIndex == 0)
             {
                 int aq=int.Parse(textBox1.Text);
                 int aw=int.Parse(textBox2.Text);
