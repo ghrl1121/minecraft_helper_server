@@ -18,7 +18,6 @@ namespace 마크서버_만들기
         public Form2()
         {
             InitializeComponent();
-
         }
         public Form2(string data)
         {

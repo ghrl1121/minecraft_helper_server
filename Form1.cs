@@ -44,15 +44,25 @@ namespace 마크서버_만들기
             //서버준비
             //Form2로
             //파일 있는지 채크
-            string m = Path.GetDirectoryName(textBox1.Text);
-            if (Directory.Exists(m))
+            //실행중일때 오류
+            Process[] processes = Process.GetProcessesByName("java");
+            if (processes.Length > 0)
             {
-                Form2 form2 = new Form2(textBox1.Text);
-                form2.ShowDialog();
+                //실행중일때 오류!
+                MessageBox.Show("실행중입니다 \r\n \"stop\" 해주세요!");
             }
             else
             {
-                MessageBox.Show("파일이 없습니다");
+                string m = Path.GetDirectoryName(textBox1.Text);
+                if (Directory.Exists(m))
+                {
+                    Form2 form2 = new Form2(textBox1.Text);
+                    form2.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("파일이 없습니다");
+                }
             }
         }
 
