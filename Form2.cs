@@ -63,7 +63,7 @@ namespace 마크서버_만들기
                 }
                 else
                 {
-                    string[] lines = { "@echo off", "java -Xmx" +aq + "M" + " -Xms" + aw + "M" +" -jar "+ AA,"pause"};
+                    string[] lines = { "@echo off", "java -Xmx" +aq + "M" + " -Xms" + aw + "M" +" -jar "+ AA+ " nogui", "pause"};
                     File.WriteAllLines(AB+@"\comms.bat",lines);
                     Process A =new Process();
                     A.StartInfo.FileName = "comms.bat";
@@ -88,7 +88,7 @@ namespace 마크서버_만들기
                 }
                 else
                 {
-                    string[] lines = { "@echo", "java -Xmx" + aq + "G" + " -Xms" + aw+ "G" + " -jar " + aa, "pause" };
+                    string[] lines = { "@echo", "java -Xmx" + aq + "G" + " -Xms" + aw+ "G" + " -jar " + aa + " nogui", "pause" };
                     File.WriteAllLines(ab + @"\comms.bat",lines);
                     Process A =new Process();
                     A.StartInfo.FileName = "comms.bat";
