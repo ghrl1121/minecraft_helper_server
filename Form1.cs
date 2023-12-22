@@ -17,7 +17,8 @@ namespace 마크서버_만들기
         public Form1()
         {
             InitializeComponent();
-            
+            //파일 확인
+            //text.lal 로 로딩
             if (File.Exists("text.lal"))
             {
                 StreamReader stream = new StreamReader("text.lal");
@@ -43,8 +44,7 @@ namespace 마크서버_만들기
         {
             //서버준비
             //Form2로
-            //파일 있는지 채크
-            //실행중일때 오류
+            //파일 있는지 채크   
             Process[] processes = Process.GetProcessesByName("java");
             if (processes.Length > 0)
             {
@@ -140,7 +140,10 @@ namespace 마크서버_만들기
             {
                 textBox1.Text = Path.GetFullPath(dialog.FileName);
                 string[] strings = textBox1.Text.Split();
+                //text.lal로 저장...
                 File.WriteAllLines("text.lal", strings);
+                //test.lal를 지우면 다시 찾아야 한다고 알려..
+                MessageBox.Show("text.lal를 지우시면 다시 찾아야 합니다");
             }
             else
             {

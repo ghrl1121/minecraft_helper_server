@@ -55,8 +55,6 @@ namespace 마크서버_만들기
                 int aw=int.Parse(textBox2.Text);
                 string AA = Path.GetFileName(label5.Text);
                 string AB = Path.GetDirectoryName(label5.Text);
-                string BA = label1.Text;
-                BA = BA.ToLower();
                 if(aq <4080 ||aw <4080)
                 {
                     MessageBox.Show("4080 이하를 하시면 안됩니다");
@@ -80,8 +78,6 @@ namespace 마크서버_만들기
                 int aw= int.Parse(textBox2.Text);
                 string aa = Path.GetFileName(label5.Text);
                 string ab = Path.GetDirectoryName(label5.Text);
-                string BA = label1.Text;
-                BA= BA.ToLower();
                 if(aq <4 || aw <4)
                 {
                     MessageBox.Show("4 이하를 하시면 안됩니다");
