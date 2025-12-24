@@ -29,15 +29,8 @@ namespace 마크서버_만들기
             {
                 textBox1.Text = "서버 버킷을 찾아 주세요";
             }
-
-            if (File.Exists(textBox1.Text))
-            {
-                //파일이 있을경우 넘기고... 
-            }
-            else
-            {
-                textBox1.Text = "파일이 삭제 된것 같습니다!";
-            }
+            //실행할때 ..; 을 클릭 하라고 알려주기
+            MessageBox.Show("찾을때 \"...\"을클릭해주세요");
         }
 
     private void button1_Click(object sender, EventArgs e)
@@ -61,7 +54,7 @@ namespace 마크서버_만들기
                 }
                 else
                 {
-                    MessageBox.Show("파일이 없습니다");
+                    MessageBox.Show("파일이 없습니다\r\n다시 찾아주세요!(...클릭)");
                 }
             }
         }
